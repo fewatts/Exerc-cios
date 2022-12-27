@@ -1,0 +1,15 @@
+count = soma = maior_valor = menor_valor = 0
+while True:
+    valor = int(input('Digite números inteiros: '))
+    count += 1
+    soma += valor
+    if count == 1:
+        maior_valor = menor_valor = valor
+    if valor < menor_valor:
+        menor_valor = valor
+    if valor > maior_valor:
+        maior_valor = valor
+    opção = str(input('Deseja continuar? [S/N] ')).strip().upper()[0]
+    if opção in 'N':
+        break
+print(f'A média dos valores de entrada é de {soma/count:.2f}\nO maior valor é de {maior_valor}\nO menor valor é de {menor_valor}')

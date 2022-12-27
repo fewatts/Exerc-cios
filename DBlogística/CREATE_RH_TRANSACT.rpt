@@ -1,0 +1,6 @@
+﻿Msg 5133, Level 16, State 1, Line 3
+Directory lookup for the file "C:\RH_TRANSACT\RH_TRANSACT.mdf" failed with the operating system error 2(The system cannot find the file specified.).
+Msg 1802, Level 16, State 1, Line 3
+CREATE DATABASE failed. Some file names listed could not be created. Check related errors.
+
+Completion time: 2022-07-01T11:23:36.8031183-03:00
