@@ -8,7 +8,7 @@ cadastro_a = {'ID': ['AA2930', 'BB4563', 'CC2139', 'DE2521', 'GT3462', 'HH1158']
 cadastro_a = pd.DataFrame(cadastro_a, columns = ['ID', 'Nome', 'Idade', 'Cep'])
 
 #Out:
-#ID	Nome	Idade	Cep
+#       ID	 Nome  Idade	Cep
 #0	AA2930	Victor	20	9384-293
 #1	BB4563	Amanda	35	2948-394
 #2	CC2139	Bruna	40	0294-349
@@ -33,7 +33,7 @@ compras = pd.DataFrame(compras, columns = ['Id', 'Data', 'Valor'])
 compras
 
 #Out(compras):
-#Id	Data	Valor
+#       Id	   Data	    Valor
 #0	AA2930	2022-01-01	300
 #1	EF4488	2022-03-04	1498
 #2	CC2139	2022-10-04	5000
@@ -59,7 +59,7 @@ inner
 
 pd.merge(cadastro_a, cadastro_b[['ID', 'Idade', 'Cep']], on=['ID'], how='inner', suffixes=('__a', '__b'))
 
-#ID	Nome	Idade__a	Cep__a	Idade__b	Cep__b
+#     ID    Nome  Idade__a	Cep__a	Idade__b	Cep__b
 #0	GT3462	Ricardo	30	9428-827	30	0967-593
 #1	HH1158	Marla	27	9285-928	27	0985-829
 
@@ -67,7 +67,7 @@ lojas = pd.concat([cadastro_a, cadastro_b], ignore_index=True)
 lojas
 
 
-#ID	Nome	Idade	Cep
+#     ID	Nome	Idade	Cep
 #0	AA2930	Victor	20	9384-293
 #1	BB4563	Amanda	35	2948-394
 #2	CC2139	Bruna	40	0294-349
@@ -75,7 +75,7 @@ lojas
 #4	GT3462	Ricardo	30	9428-827
 #5	HH1158	Marla	27	9285-928
 #6	CC9999	Marcos	19	7842-789
-#7	EF4488	Patrícia	30	9845-098
+#7	EF4488	Patrícia	9845-098
 #8	DD9999	Erika	22	0294-826
 #9	GT3462	Ricardo	30	0967-593
 #10	HH1158	Marla	27	0985-829
@@ -90,7 +90,7 @@ lojas.drop_duplicates(subset='ID')
 #4	GT3462	Ricardo	30	9428-827
 #5	HH1158	Marla	27	9285-928
 #6	CC9999	Marcos	19	7842-789
-#7	EF4488	Patrícia	30	9845-098
+#7	EF4488	Patrícia	9845-098
 #8	DD9999	Erika	22	0294-826
 
 esquerda = pd.merge(cadastro_a, compras, how='left', on=['ID'])
@@ -99,7 +99,7 @@ esquerda.groupby(['ID', 'Nome'])['Valor'].sum()
 
 pd.merge(cadastro_a, cadastro_b, how='outer', on='ID', indicator='true')
 
-#ID	Nome_x	Idade_x	Cep_x	Nome_y	Idade_y	Cep_y	true
+#     ID	Nome_x	Idade_x	Cep_x	Nome_y	Idade_y	Cep_y	true
 #0	AA2930	Victor	20.0	9384-293	NaN	NaN	NaN	left_only
 #1	BB4563	Amanda	35.0	2948-394	NaN	NaN	NaN	left_only
 #2	CC2139	Bruna	40.0	0294-349	NaN	NaN	NaN	left_only

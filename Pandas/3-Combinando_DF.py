@@ -18,21 +18,21 @@ df3 = pd.DataFrame({'A': ['A8', 'A9', 'A10', 'A11'],
                     'D': ['D8', 'D9', 'D10', 'D11']},
                    index = [8, 9, 10, 11])
 #df1 = 	
-#A	B	C	D
+#   A	B	C	D
 #0	A0	B0	C0	D0
 #1	A1	B1	C1	D1
 #2	A2	B2	C2	D2
 #3	A3	B3	C3	D3
 
 #df2 = 
-#A	B	C	D
+#   A	B	C	D
 #4	A4	B4	C4	D4
 #5	A5	B5	C5	D5
 #6	A6	B6	C6	D6
 #7	A7	B7	C7	D7
 
 #df3 = 
-#A	B	C	D
+#   A	B	C	D
 #4	A4	B4	C4	D4
 #5	A5	B5	C5	D5
 #6	A6	B6	C6	D6
@@ -43,7 +43,7 @@ frames = [df1, df2, df3] #forma uma lista
 FramesCombinados = pd.concat(frames) #ou framescombinados = pd.concat([df1, df2, df3])
 
 #Frames combinados = 
-#A	B	C	D
+#   A	B	C	D
 #0	A0	B0	C0	D0
 #1	A1	B1	C1	D1
 #2	A2	B2	C2	D2

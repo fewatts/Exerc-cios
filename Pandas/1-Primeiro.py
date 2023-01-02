@@ -39,7 +39,7 @@ np.random.randn(6,4)
 
 df = pd.DataFrame(np.random.randn(6,4), index = datas, columns = ['Teste', 'Pessoas', 'IA', 'Yeah'])
 
-#OutPut: 	Teste	Pessoas	IA	Yeah
+#OutPut: 	  Teste	    Pessoas      	IA	      Yeah
 #2019-01-01	1.536758	-0.175004	0.418668	0.603794
 #2019-01-02	1.190349	0.471640	-1.465663	-0.119803
 #2019-01-03	-0.422298	1.069849	-0.798789	-1.786624
@@ -59,7 +59,7 @@ df2 = pd.DataFrame({'a':7,
                     'e': pd.Categorical(['test', 'train', 'test', 'train']),
                     'f': 'python'})
 #Output: 
-#a	b	c	d	e	f
+#   a 	       b   c	d	e	       f
 #0	7	2019-01-01	1.0	3	test	python
 #1	7	2019-01-01	1.0	3	train	python
 #2	7	2019-01-01	1.0	3	test	python
@@ -67,7 +67,8 @@ df2 = pd.DataFrame({'a':7,
 
 df2.dtypes
 
-#Output: a             int64
+#Output: 
+#a             int64
 #b    datetime64[ns]
 #c           float32
 #d             int32
