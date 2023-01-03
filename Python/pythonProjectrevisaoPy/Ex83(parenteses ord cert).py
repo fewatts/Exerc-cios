@@ -4,7 +4,7 @@ for l in expre:
     if l == '(':
         pilha.append('(')
     elif l == ')':
-         if len(pilha) > 0:
+        if len(pilha) > 0:
             pilha.pop()
         else:
             pilha.append(')')
