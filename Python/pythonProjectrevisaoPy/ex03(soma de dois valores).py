@@ -1,7 +1,7 @@
-somavalor = 0
+soma = 0
 resultado = 0
-while somavalor != 2:
+while soma != 2:
     valor = int(input('Digite um valor: '))
-    somavalor += 1
+    soma += 1
     resultado += valor
 print(f' A soma entre os valores é {resultado}')

@@ -3,7 +3,6 @@ print(' Fibonacci ')
 print('¬' * 11)
 n1 = 0
 n2 = 1
-elements = 0
 n = int(input('Digite quantos termos deseja ver: '))
 print(f'{n1} ¬ {n2} ¬ ', end='')
 elements = 2

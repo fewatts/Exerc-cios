@@ -10,4 +10,4 @@ sleep(3)
 if player == computador:
     print('Você me ganhou! Escolhemos os mesmos números!')
 else:
-    print(f'Infelismente, eu venci! HAHAHAHAHAHAHAHAHAHAAH\n eu escolhi {computador} e você  escolheu {player}')
+    print(f'eu venci! HAHAHAHAHAHAHAHAHAHAAH\n eu escolhi {computador} e você  escolheu {player}')

@@ -1,7 +1,4 @@
-soma_idade = 0
-maior = 0
-menor = 0
-mulheres_menores = 0
+soma_idade = maior = menor = mulheres_menores = 0
 nome_mais_velho = ''
 opcao = ''
 while opcao != 'N':
