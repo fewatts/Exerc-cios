@@ -23,18 +23,18 @@ def leiaint(msg):
 
 
 def opção_1():
-    print('#' * 50)
-    print(f'{"OPÇÃO 1":^50}')
+    print('~' * 50)
+    print(f'{"PESSOAS CADASTRADAS":^50}')
     print('¬' * 50)
 
 
 def opção_2():
-    print('#' * 50)
-    print(f'{"OPÇÃO 2":^50}')
+    print('=' * 50)
+    print(f'{"CADASTRAR NOVA PESSOA":^50}')
     print('¬' * 50)
 
 
 def opção_3():
-    print('#' * 50)
-    print(f'{"OPÇÃO 3":^50}')
+    print('*' * 50)
+    print(f'{"FECHANDO PROGRAMA":^50}')
     print('¬' * 50)

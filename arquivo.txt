@@ -1,0 +1,7 @@
+fernando;23
+sandra;45
+felipe;27
+fabio;49
+ana;21
+margarida;69
+joao;12
