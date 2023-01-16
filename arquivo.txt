@@ -1,7 +1,10 @@
 fernando;23
 sandra;45
 felipe;27
-fabio;49
 ana;21
 margarida;69
-joao;12
+pedro;71
+gustavo;30
+hector;90
+diónisos;100000
+zeus;1000000000000
