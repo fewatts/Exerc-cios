@@ -1,5 +1,6 @@
 from classes import *
 
+
 def títulos(msg):
     tam = len(msg) + 10
     print('~' * tam)
@@ -35,6 +36,7 @@ def criar_cliente():
     except:
         print('ERRO...')
 
+
 def criar_conta(cliente):
     try:
         while True:
@@ -50,10 +52,6 @@ def criar_conta(cliente):
             if resp in 'S':
                 conta_0 = Conta(dados[0], cliente, dados[2], dados[3])
                 print('Dados Adicionados!')
-                print(conta_0.número)
-                print(conta_0.cliente)
-                print(conta_0.saldo)
-                print(conta_0.limite)
                 return conta_0
     except:
         print('ERRO...')
