@@ -1,5 +1,6 @@
-import op
 from op import Conta
+import op
 
-conta = op.Conta('6548-8', 'Ana', '2768.95', 10000)
-print(conta)
+conta = op.Conta('34583-9', 'wednesday', 120, 10000)
+conta.deposita(20.0)
+conta.extrato()
