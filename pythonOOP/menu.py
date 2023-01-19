@@ -10,11 +10,12 @@ def títulos(msg):
 
 def menu():
     print(f'''1-Criar conta
-2-Verificar extrato
-3-Depositar
-4-Sacar
-5-Transferir
-6-Fechar sistema
+2-Ver contas ativas
+3-Verificar extrato
+4-Depositar
+5-Sacar
+6-Transferir
+7-Fechar sistema
 ''')
 
 
@@ -23,9 +24,12 @@ def criar_cliente():
         while True:
             dados = []
             dados.clear()
-            dados.append(str(input('Nome: ')))
-            dados.append(str(input('Sobrenome: ')))
-            dados.append(str(input('CPF: ')))
+            try:
+                dados.append(str(input('Nome: ')))
+                dados.append(str(input('Sobrenome: ')))
+                dados.append(str(input('CPF: ')))
+            except:
+                print('ERRO...')        
             for d in dados:
                 print(f'{d}...', end='')
             resp = str(input('\nConfirma os dados? [S/N] ')).strip().upper()[0]
@@ -42,10 +46,13 @@ def criar_conta(cliente):
         while True:
             dados = []
             dados.clear()
-            dados.append(str(input('Nº da conta: ')))
-            dados.append(cliente.nome)
-            dados.append(float(input('SALDO: ')))
-            dados.append(float(input('LIMITE: ')))
+            try:
+                dados.append(str(input('Nº da conta: ')))
+                dados.append(cliente._nome)
+                dados.append(float(input('SALDO: ')))
+                dados.append(float(input('LIMITE: ')))
+            except:
+                print('ERRO...')
             for d in dados:
                 print(f'{d}...', end='')
             resp = str(input('\nConfirma os dados? [S/N] ')).strip().upper()[0]
@@ -55,3 +62,4 @@ def criar_conta(cliente):
                 return conta_0
     except:
         print('ERRO...')
+
