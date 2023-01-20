@@ -16,6 +16,10 @@ class Conta:
         conta['Saldo'] += valor
 
 
+    def saca(conta, valor):
+        conta['Saldo'] -= valor
+
+
     def get_titular(conta):
         return conta['Titular']
 
@@ -46,6 +50,6 @@ count = 1
 for c in contas:
     títulos(f'Banco WATTs Conta Nº{count}')
     for k, v in c.items():
-        print(f'{k:<16}{v:>12}')
+        print(f'{k:<12}{v:>12}')
     print()
     count += 1
