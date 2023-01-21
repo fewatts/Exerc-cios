@@ -43,7 +43,7 @@ def mostrar_contas():
         count += 1
         títulos(f'Banco WATTs Conta Nº{count}')
         for k, v in c.items():
-            print(f'{k:<12}{v:>12}')
+            print(f'{k:<19}{v:>12}')
     print()
 
 
@@ -63,6 +63,8 @@ def processamento():
         elif op == 3:
             c = int(input('Digite o número da conta que deseja depositar: '))
             c -= 1
+            if c >= len(contas):
+                print('Número inválido...')
             v = float(input('Digite O valor de depósito: '))
             Conta.deposita(contas[c], v)
             títulos('ESCOLHA')
@@ -70,6 +72,8 @@ def processamento():
         elif op == 4:
             c = int(input('Digite o número da conta que deseja depositar: '))
             c -= 1
+            if c > len(contas):
+                print('Número inválido...')
             v = float(input('Digite O valor de saque: '))
             Conta.saca(contas[c], v)
             títulos('ESCOLHA')
