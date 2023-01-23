@@ -191,11 +191,11 @@ def processamento():
         elif op == 3:
             while True:
                 c = int(input('Digite o número da conta que deseja depositar: '))
-                c -= 1
                 if c > len(contas):
                     print('Número inválido...')
                 else:
                     break
+            c -= 1
             v = float(input('Digite O valor de depósito: '))
             Conta.deposita(contas[c], v)
             títulos('ESCOLHA')
@@ -203,13 +203,11 @@ def processamento():
         elif op == 4:
             while True:
                 c = int(input('Digite o número da conta que deseja sacar: '))
-                c -= 1
                 if c > len(contas):
                     print('Número inválido...')
                 else:
                     break
-            if c > len(contas):
-                print('Número inválido...')
+            c -= 1
             v = float(input('Digite O valor de saque: '))
             Conta.saca(contas[c], v)
             títulos('ESCOLHA')
