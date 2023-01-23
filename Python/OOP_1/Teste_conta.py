@@ -1,8 +1,8 @@
-from Library import processamento
+from Library import classes
 
 #__Main__{
-processamento.títulos('BANCO WATTs')
-processamento.menu()
-processamento.processamento()
-processamento.títulos('<<<< Obrigado, Volte sempre! >>>>>>')
+classes.títulos('BANCO WATTs')
+classes.menu()
+classes.processamento()
+classes.títulos('<<<< Obrigado, Volte sempre! >>>>>>')
 # }
