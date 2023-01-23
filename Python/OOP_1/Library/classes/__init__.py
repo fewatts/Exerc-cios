@@ -101,16 +101,13 @@ class Conta:
 
 
     def deposita(self, valor):
-        try:
-            self.__saldo += valor
-            self.__histórico.__transações.append(f'Depósito de {valor}')
-        except:
-            print('ERRO...')
+        self.__saldo += valor
+        self.__histórico.__transações.append(f'Depósito de {valor}')
 
 
     def saca(self, valor):
         try:
-            if (self.saldo < valor):
+            if (self.__saldo < valor):
                 return False
             else:
                 self.__saldo -= valor
@@ -194,18 +191,23 @@ def processamento():
         elif op == 3:
             while True:
                 c = int(input('Digite o número da conta que deseja depositar: '))
-                if c >= len(contas):
+                c -= 1
+                if c > len(contas):
                     print('Número inválido...')
                 else:
                     break
-            c -= 1
             v = float(input('Digite O valor de depósito: '))
             Conta.deposita(contas[c], v)
             títulos('ESCOLHA')
             menu()
         elif op == 4:
-            c = int(input('Digite o número da conta que deseja depositar: '))
-            c -= 1
+            while True:
+                c = int(input('Digite o número da conta que deseja sacar: '))
+                c -= 1
+                if c > len(contas):
+                    print('Número inválido...')
+                else:
+                    break
             if c > len(contas):
                 print('Número inválido...')
             v = float(input('Digite O valor de saque: '))
@@ -213,7 +215,21 @@ def processamento():
             títulos('ESCOLHA')
             menu()
         elif op == 5:
-            break 
+            while True:
+                c = int(input('Digite o número da conta que deseja ver o histórico: '))
+                c -= 1
+                if c > len(contas):
+                        print('Número inválido...')
+                else:
+                    break
+            Conta.extrato(contas[c])
+            títulos('ESCOLHA')
+            menu()
+        elif op == 6:
+            break
+        else:
+            print('Opção inválida...') 
+
 
 def títulos(msg):
     tam = len(msg) + 10
@@ -227,4 +243,5 @@ def menu():
 2-Mostrar Contas
 3-Depositar 
 4-Sacar
-5-Fechar sistema''')
+5-Histórico das contas
+6-Fechar sistema''')
