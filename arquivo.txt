@@ -1,7 +1,6 @@
 fernando;23
 sandra;45
 felipe;27
-ana;21
 margarida;69
 pedro;71
 gustavo;30
